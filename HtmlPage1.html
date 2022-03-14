@@ -1,0 +1,53 @@
+﻿Standard Controls
+--------------------
+There are 30 controls in Standard controls.Lets c one b one with thier functionality
+
+1)TEXTBOX
+------------
+<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+
+Here  ID="TextBox1"    We can have N number of textBox in web page but all text boxes should have ubique name ,that name is called as ID here,So we should give ID for each controls(TextBox Control)
+      runat="server"    This is the server Control Attribute to telling weserver that this s serverControl,or webserver will treat this control as HTML control,So we should compulsory give runat="server" Attribute.
+
+	  Why we Should Use server Controls than HTML Controls??
+
+	  1)HTML C ontrols will not maintain the state of the value,once the data submitted to server,the data get cleared off
+	     ASP.NET Server Controls maintains the state of the value even after submitting the data to the server.
+
+
+
+		 2)ASP.NET Server Controls can be directly used/accessed in our code but we can not bu used directly in our code(can't go directly to write logic when double click HTML controls)
+		   We have to write code like Request.Form["Textboxname"].
+
+		  3)these set of ASP.NET Controls have rich set of properties and methods and events available
+		   **************
+		   All our server controls are rendered.
+		   Rendering???
+		   Browser doesn't understand ASP.NET code,its only understand HTML code,So All our ASP.NET code Converted into HTML code,this process called as RENDERING.
+
+
+		   this is our ASP.Net code
+
+<asp:TextBox ID="UserName" runat="server"></asp:TextBox>
+<asp:Button ID="Submit" runat="server" Text="Submit" OnClick="Submit_Click" />
+
+     this is rendered code (this code only reach our browser)
+
+<input name="UserName" type="text" id="UserName" />
+<input type="submit" name="Submit" value="Submit" id="Submit" />
+
+
+
+
+Every control has its own
+
+1)Property
+2)Methods
+3)Events
+
+    1)A Property is an attribute of then control which mainly has its impact on the look(Appearence) of the control.so many properties uder each control
+
+	forecolor
+	backcolor
+	bordercolor
+	borderstyle
